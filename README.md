@@ -205,7 +205,11 @@ For users with an active product associated with the model by navigating to the 
 For products configured with the 'one time' type, invoices will be generated and issued based on any pricing set within the assigned pricing policy.
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/79fb24e9-3674-466c-9710-87b6b8ef5ee3" />
 
+### Automation with cron
 
+We will need a custom cron task to manage invoicing, account suspension, termination etc. 
+This can be added to the crontab under the correct user account, eg. 
 
+0 0 * * * php /<whmcs_path>/crons/hostedai_cron.php
 
 
