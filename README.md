@@ -21,7 +21,14 @@ Upload the `hostedai_cron.php` file to the `<whmcs_dir>/crons/` directory on you
 ```plaintext example
 cp crons/hostedai_cron.php /<whmcs_path>/crons/
 ```
-  
+
+Add an entry into the users crontab to generate and send invoices.
+
+```plaintext example
+crontab -u <user> -e
+
+0 0 * * * /usr/bin/php <whmcs_dir>/crons/hostedai_cron.php
+```
   
 Upload the `hostedai` folder to the `<whmcs_dir>/modules/servers/` directory on your server.
 
